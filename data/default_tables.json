@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "fonte": "Extraído das fórmulas da planilha AREF/ABIN. As Matrizes 4, 7 e 11 reproduzem exatamente os IFs aninhados de 'tabelas aref (3)'!J12, I24 e I32.",
+  "tabela_2_perfil_thresholds": {
+    "descricao": "Média aritmética dos 5 atributos de caracterização → nível",
+    "MUITO ALTO": "> 4.5",
+    "ALTO": "> 3.5 e <= 4.5",
+    "MÉDIO": "> 2.5 e <= 3.5",
+    "BAIXO": "> 1.5 e <= 2.5",
+    "MUITO BAIXO": "<= 1.5"
+  },
+  "tabela_3_seguranca_thresholds": {
+    "descricao": "Média aritmética dos 4 atributos de avaliação do sistema → classificação",
+    "ADEQUADO": "> 4.5",
+    "SUFICIENTE": "> 3.5 e <= 4.5",
+    "RAZOÁVEL": "> 2.5 e <= 3.5",
+    "INSUFICIENTE": "> 1.5 e <= 2.5",
+    "DESPREZÍVEL": "<= 1.5"
+  },
+  "matriz_4_efetividade": {
+    "descricao": "Perfil da Ameaça × Sistema de Segurança → pontuação (1-25). Fonte: fórmula J12.",
+    "linhas": ["MUITO BAIXO", "BAIXO", "MÉDIO", "ALTO", "MUITO ALTO"],
+    "colunas": ["ADEQUADO", "SUFICIENTE", "RAZOÁVEL", "INSUFICIENTE", "DESPREZÍVEL"],
+    "valores": {
+      "MUITO BAIXO": {"ADEQUADO": 1, "SUFICIENTE": 2, "RAZOÁVEL": 3, "INSUFICIENTE": 4, "DESPREZÍVEL": 5},
+      "BAIXO":       {"ADEQUADO": 2, "SUFICIENTE": 4, "RAZOÁVEL": 6, "INSUFICIENTE": 8, "DESPREZÍVEL": 10},
+      "MÉDIO":       {"ADEQUADO": 3, "SUFICIENTE": 6, "RAZOÁVEL": 9, "INSUFICIENTE": 12, "DESPREZÍVEL": 15},
+      "ALTO":        {"ADEQUADO": 4, "SUFICIENTE": 8, "RAZOÁVEL": 12, "INSUFICIENTE": 16, "DESPREZÍVEL": 20},
+      "MUITO ALTO":  {"ADEQUADO": 5, "SUFICIENTE": 10, "RAZOÁVEL": 15, "INSUFICIENTE": 20, "DESPREZÍVEL": 25}
+    },
+    "nota": "Cell MUITO BAIXO×RAZOÁVEL na planilha original tem typo (compara com 'RAZOAVÉL' sem acento correto), fazendo a cell retornar 0. Aqui corrigido para 3, valor consistente com a metodologia ABIN."
+  },
+  "tabela_5_nivel_efetividade": {
+    "descricao": "Pontuação (1-25) → nível da efetividade da ameaça",
+    "MUITO ALTA": "> 16",
+    "ALTA": "> 10 e <= 16",
+    "MEDIANA": "> 6 e <= 10",
+    "BAIXA": "> 3 e <= 6",
+    "MUITO BAIXA": "> 1 e <= 3"
+  },
+  "matriz_7_probabilidade": {
+    "descricao": "Efetividade da Ameaça × Histórico da Torcida → pontuação (1-25). Fonte: fórmula I24.",
+    "linhas": ["MUITO BAIXA", "BAIXA", "MEDIANA", "ALTA", "MUITO ALTA"],
+    "colunas": ["NÍVEL 1", "NÍVEL 2", "NÍVEL 3", "NÍVEL 4"],
+    "valores": {
+      "MUITO BAIXA": {"NÍVEL 1": 1, "NÍVEL 2": 2, "NÍVEL 3": 3, "NÍVEL 4": 5},
+      "BAIXA":       {"NÍVEL 1": 2, "NÍVEL 2": 4, "NÍVEL 3": 6, "NÍVEL 4": 10},
+      "MEDIANA":     {"NÍVEL 1": 3, "NÍVEL 2": 6, "NÍVEL 3": 9, "NÍVEL 4": 15},
+      "ALTA":        {"NÍVEL 1": 4, "NÍVEL 2": 8, "NÍVEL 3": 12, "NÍVEL 4": 20},
+      "MUITO ALTA":  {"NÍVEL 1": 5, "NÍVEL 2": 10, "NÍVEL 3": 15, "NÍVEL 4": 25}
+    }
+  },
+  "tabela_8_nivel_probabilidade": {
+    "descricao": "Pontuação → nível de probabilidade",
+    "ALTAMENTE PROVÁVEL": "> 15",
+    "PROVÁVEL": "> 9 e <= 15",
+    "MEDIANA": "> 4 e <= 9",
+    "IMPROVÁVEL": "> 2 e <= 4",
+    "REMOTA": "<= 2"
+  },
+  "tabela_10_nivel_impacto": {
+    "descricao": "Soma dos fatores (lesão+dano+imagem) → nível do impacto",
+    "CRÍTICO": "> 24",
+    "SEVERO": "> 14 e <= 24",
+    "MODERADO": "> 9 e <= 14",
+    "BAIXO": "> 4 e <= 9",
+    "MUITO BAIXO": "<= 4"
+  },
+  "matriz_11_risco": {
+    "descricao": "Probabilidade × Impacto → pontuação final (1-100). Fonte: fórmula I32.",
+    "linhas": ["REMOTA", "IMPROVÁVEL", "MEDIANA", "PROVÁVEL", "ALTAMENTE PROVÁVEL"],
+    "colunas": ["MUITO BAIXO", "BAIXO", "MODERADO", "SEVERO", "CRÍTICO"],
+    "valores": {
+      "REMOTA":             {"MUITO BAIXO": 1,  "BAIXO": 2,  "MODERADO": 4,  "SEVERO": 6,  "CRÍTICO": 10},
+      "IMPROVÁVEL":         {"MUITO BAIXO": 3,  "BAIXO": 12, "MODERADO": 12, "SEVERO": 18, "CRÍTICO": 30},
+      "MEDIANA":            {"MUITO BAIXO": 6,  "BAIXO": 12, "MODERADO": 24, "SEVERO": 36, "CRÍTICO": 60},
+      "PROVÁVEL":           {"MUITO BAIXO": 8,  "BAIXO": 16, "MODERADO": 32, "SEVERO": 48, "CRÍTICO": 80},
+      "ALTAMENTE PROVÁVEL": {"MUITO BAIXO": 10, "BAIXO": 20, "MODERADO": 40, "SEVERO": 60, "CRÍTICO": 100}
+    }
+  },
+  "tabela_11_classificacao_final": {
+    "descricao": "Pontuação final → classificação de risco",
+    "MUITO ALTO": "> 79",
+    "ALTO": "> 47 e <= 79",
+    "MÉDIO": "> 29 e <= 47",
+    "BAIXO": "> 9 e <= 29",
+    "MUITO BAIXO": "<= 9"
+  }
+}

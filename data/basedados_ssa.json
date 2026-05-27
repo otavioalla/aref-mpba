@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "fonte": "Adaptado de 'Efetivos' da planilha original (RJ) para a realidade de Salvador/BA. Valores iniciais herdam os patamares da planilha base e devem ser revistos pelos promotores no teste.",
+  "niveis": ["MUITO BAIXO/BAIXO", "MÉDIO", "ALTO", "MUITO ALTO"],
+  "orgaos": [
+    {
+      "orgao": "PMBA",
+      "descricao": "Polícia Militar da Bahia",
+      "papeis": [
+        {"papel": "Policiais",              "valores": [185, 265, 365, 465]},
+        {"papel": "Cavalaria (esquadras)",  "valores": [2,   2,   2,   3]},
+        {"papel": "Cães (batalhão)",        "valores": [1,   1,   1,   2]},
+        {"papel": "Choque (PMs)",           "valores": [0,   0,   0,   28]},
+        {"papel": "BEPE (eventos)",         "valores": [0,   20,  40,  80]}
+      ]
+    },
+    {
+      "orgao": "CBMBA",
+      "descricao": "Corpo de Bombeiros Militar da Bahia",
+      "papeis": [
+        {"papel": "Combatentes",            "valores": [30,  50,  80,  120]},
+        {"papel": "Viaturas",               "valores": [2,   3,   4,   6]}
+      ]
+    },
+    {
+      "orgao": "GCM-SSA",
+      "descricao": "Guarda Civil Municipal de Salvador",
+      "papeis": [
+        {"papel": "GCM Urbano",             "valores": [187, 295, 380, 408]},
+        {"papel": "GCM Trânsito",           "valores": [33,  52,  67,  72]}
+      ]
+    },
+    {
+      "orgao": "Transalvador",
+      "descricao": "Superintendência de Trânsito e Transporte do Salvador",
+      "papeis": [
+        {"papel": "Agentes",                "valores": [20,  40,  60,  90]},
+        {"papel": "Supervisores",           "valores": [2,   4,   6,   8]},
+        {"papel": "Viaturas",               "valores": [4,   8,   12,  16]},
+        {"papel": "Motos",                  "valores": [6,   12,  18,  24]},
+        {"papel": "Cones",                  "valores": [100, 200, 300, 400]},
+        {"papel": "Sinalizadores",          "valores": [10,  20,  30,  40]},
+        {"papel": "PMV (painel msg variável)", "valores": [1,   2,   3,   4]}
+      ]
+    },
+    {
+      "orgao": "Limpurb",
+      "descricao": "Empresa de Limpeza Urbana de Salvador",
+      "papeis": [
+        {"papel": "Garis",                  "valores": [5,   16,  20,  26]},
+        {"papel": "Supervisores",           "valores": [1,   1,   1,   1]},
+        {"papel": "Basculantes",            "valores": [1,   2,   2,   2]},
+        {"papel": "Varredeiras",            "valores": [0,   0,   1,   1]},
+        {"papel": "Compactadores",          "valores": [0,   0,   1,   1]},
+        {"papel": "Pipas",                  "valores": [0,   0,   1,   1]},
+        {"papel": "Containers",             "valores": [20,  30,  40,  50]}
+      ]
+    },
+    {
+      "orgao": "SUSP",
+      "descricao": "Secretaria da Segurança Pública da Bahia",
+      "papeis": [
+        {"papel": "Coordenadores",          "valores": [1,   2,   3,   4]},
+        {"papel": "Inteligência",           "valores": [2,   4,   6,   10]}
+      ]
+    },
+    {
+      "orgao": "SUVISA",
+      "descricao": "Vigilância Sanitária Municipal",
+      "papeis": [
+        {"papel": "Fiscais",                "valores": [0,   0,   0,   3]},
+        {"papel": "Técnicos",               "valores": [2,   2,   2,   3]}
+      ]
+    },
+    {
+      "orgao": "SEMOP",
+      "descricao": "Secretaria Municipal de Ordem Pública de Salvador",
+      "papeis": [
+        {"papel": "Fiscais",                "valores": [4,   8,   12,  20]}
+      ]
+    },
+    {
+      "orgao": "SAS",
+      "descricao": "Secretaria Municipal de Assistência Social",
+      "papeis": [
+        {"papel": "Supervisores",           "valores": [1,   1,   1,   1]},
+        {"papel": "Educadores Sociais",     "valores": [2,   2,   2,   4]}
+      ]
+    },
+    {
+      "orgao": "Metrô SSA (CCR)",
+      "descricao": "Metrô de Salvador — CCR Metrô Bahia",
+      "papeis": [
+        {"papel": "Agentes",                "valores": [10,  20,  30,  40]},
+        {"papel": "Supervisores",           "valores": [2,   3,   4,   5]}
+      ]
+    }
+  ]
+}
