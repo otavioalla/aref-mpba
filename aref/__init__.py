@@ -31,8 +31,11 @@ if _ROOT not in _sys.path:
     _sys.path.insert(0, _ROOT)
 
 
-if _running_under_streamlit():
+if _running_under_streamlit() and "app" not in _sys.modules:
     # Streamlit executou aref/__init__.py como script — delegar ao app real.
+    # Guard com `"app" not in sys.modules` evita recursão: quando app.py
+    # importa de aref.model, este __init__.py é re-executado mas dessa vez
+    # `app` já está em sys.modules (parcial) e pulamos a delegação.
     from app import main as _main  # noqa: E402
 
     _main()
